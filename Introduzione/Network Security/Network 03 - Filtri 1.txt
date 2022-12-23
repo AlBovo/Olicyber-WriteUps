@@ -1,1 +1,0 @@
-Filtrando il file per il protocollo HTTP possiamo vedere che ci restituisce solo 2 frame in cui nel primo come parametro Flag-string possiamo trovare la flag ovvero: flag{L3aRn1N9_4b0uT_F1lter5_p1}

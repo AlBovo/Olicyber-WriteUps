@@ -1,1 +1,0 @@
-Esaminando il quarto frame del file si può vedere che l'indirizzo MAC che cerchiamo è 26:0e:ad:ef:c6:65 mentre i bytes utilizzati sono 63 la flag è quindi: flag{26:0e:ad:ef:c6:65/63}

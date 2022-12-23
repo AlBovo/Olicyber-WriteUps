@@ -1,1 +1,0 @@
-Per trovare la flag bisogna filtrare la comunicazione usando un'espressione logica (tcp) per ottenere solo i pacchetti TCP, poi seguendo lo stream vedremo che la flag è la seguente: flag{F0lloW_7h3_Wh1t3_5tr3aM_4l1c3}
