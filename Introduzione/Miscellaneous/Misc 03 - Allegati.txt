@@ -1,0 +1,1 @@
+Scaricando l'allegato .txt della chall si ottiene la flag in chiaro ovvero: flag{D0wnL04d_4t74Chm3n75}
