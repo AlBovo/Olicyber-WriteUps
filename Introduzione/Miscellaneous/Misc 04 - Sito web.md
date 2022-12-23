@@ -1,0 +1,1 @@
+Aprendo il sito web scritto nella chall e usando l'unico bottone presente nel sito si ottiene la password in chiaro ovvero: flag{D0wnL04d_4t74Chm3n75}
