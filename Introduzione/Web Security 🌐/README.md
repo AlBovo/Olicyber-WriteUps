@@ -1,19 +1,19 @@
-# Web Security 🌐
+# <b>Web Security</b> 🌐
 In questa sezione dell'introduzione ci sono le writes-up di tutte le challenge di web security di <a href="https://training.olicyber.it/challenges">Olicyber</a>.
 
-## Setup
-In questa sezione dell'introduzione ci sono diversi programmi in python con alcune librerie molto famose.
+## <b>Setup</b>
+In questa sezione dell'introduzione ci sono diversi programmi in python con alcune librerie molto famose. Per poterli eseguire bisogna quindi installare python e le librerie che utilizzo.
 
-#### Linux
+#### <b>Linux</b>
 Per installare su linux python bisogna usare questo comando sul terminale <code>sudo apt-get install python3</code>. Consiglio comunque di eseguire il comando <code>sudo apt-get update && sudo apt-get upgrade</code> per aggiornare i pacchetti ed evitare problemi di compatibilità.
 
-### Windows
+#### <b>Windows</b>
 Per installare su windows python si può o installare il .exe o dal microsoft store, <a href="https://www.python.org/downloads/">qui</a> trovi l'elenco di tutte le versioni.
 
-### Librerie
+### <b>Librerie</b>
 Per installare le librerie basta installare pip, linux: <code>sudo apt-get install pip</code> su windows dovrebbe essere installato insieme al pacchetto che avete installato precedentemente.
 
-## Challenge 🌐
+## <b>Challenge</b> 🌐
 
 ### Web 01
 In questa chall basta mandare una richiesta GET al <a href="http://web-01.challs.olicyber.it/">link</a> dato per trovare la flag.
