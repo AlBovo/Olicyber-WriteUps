@@ -1,0 +1,1 @@
+Per risolvere questa chall bisogna notare che c'è scritto qualcosa dentro al sole dato nella foto della chall, modificando la tone curve RGB della foto possiamo quindi vedere la flag in chiaro ovvero: <code>**flag{h1dd3n_by_7h3_5un}**</code><br><img src="https://i.ibb.co/9vYLHFL/Bright-Sun-flag.png" alt="flag"><br>P.S. come tool uso FireAlpaca.

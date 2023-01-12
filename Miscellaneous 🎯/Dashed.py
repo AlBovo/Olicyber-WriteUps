@@ -15,7 +15,7 @@ dizionario_morse = {'A':'.-', 'B':'-...', # template trovabile ovunque
                     '?':'..--..', '/':'-..-.', '-':'-....-',
                     '(':'-.--.', ')':'-.--.-'}
 
-flag = str(open("dashed.txt", "r").read()).split(" ")
+flag = str(open("dashed.txt", "r").read()).split(" ") # mettere dashed.txt nella dir Olicyber-WritesUp/dashed.py
 temp_string = ""
 for words in flag:
     for i in dizionario_morse:
@@ -26,16 +26,19 @@ flag2 = ""
 for numbers in temp_string:
     flag2 += bytes.fromhex(numbers).decode("ascii")
 flag3 = int(flag2, 2).to_bytes(((flag2.__len__()) + 7) // 8, 'big').decode("ascii")
-flag4 = b64decode(flag3).decode()
+flag4 = b64decode(flag3).decode().replace("\n", "")
 shift = -1
 for i in flag4:
     if shift == -1:
-        shift = ord(i) - ord('F')
-    if i != '{' and i != '}' and i != '_':
-        pos = ord(i) - ord('A')
-        new_pos = (pos - shift) % 26
-        print(chr(new_pos + ord('A')), end="")
+        shift = ord(i) - ord('f')
+    if i in "abcdefghijklmnopqrstuvwxyz" or i in str("abcdefghijklmnopqrstuvwxyz").upper():
+        if i in "abcdefghijklmnopqrstuvwxyz":
+            pos = ord(i) - ord('a')
+            new_pos = (pos + shift) % 26
+            print(chr(new_pos + ord('a')), end="")
+        else:
+            pos = ord(i) - ord('A')
+            new_pos = (pos + shift) % 26
+            print(chr(new_pos + ord('A')), end="")
     else:
         print(i, end="")
-        
-# TODO finire qua
