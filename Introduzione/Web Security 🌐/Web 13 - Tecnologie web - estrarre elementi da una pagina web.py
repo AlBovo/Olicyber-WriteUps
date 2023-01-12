@@ -6,4 +6,3 @@ print("flag{", end="") # inizio a scrivere la flag
 for i in zuppetta.find_all("span"): # ottengo ogni carattere della flag (hanno il tag span)
     print(str(i).replace('<span class="red">', "").replace("</span>",""), end="") # scrivo ogni carattere della flag
 print("}") # fine della flag
-''' La flag di questa chall è: flag{donotrecommenddoingthisbyhand} '''

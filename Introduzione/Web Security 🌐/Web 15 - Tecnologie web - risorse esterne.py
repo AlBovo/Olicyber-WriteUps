@@ -11,4 +11,3 @@ for file in zuppetta.find_all("script", src=True): # ottengo i link dei js ester
     js = requests.get(url+file['src']).text # ottengo il codice js
     if "flag" in js: # se c'è la flag la stampo
         print(js)
-''' La flag di questa chall è: flag{5n00ping_4r0und} '''
