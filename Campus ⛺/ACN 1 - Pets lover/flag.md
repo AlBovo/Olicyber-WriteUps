@@ -1,0 +1,1 @@
+Per risolvere questa chall bisogna andare ad aprire tutti i pdf dei profili dati nel .zip e provare tutti i nomi degli animali, in questo caso la password è <code>Chippy</code> (gatto di Jane Kerry) quindi la flag sarà <code>***acn{Chippy}***</code>
