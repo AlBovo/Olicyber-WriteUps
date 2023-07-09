@@ -1,56 +1,55 @@
-import socket, binascii, base64
-s = socket.socket()
-s.connect(("based.challs.olicyber.it", 10600)) # ancora in beta
-r = s.recv(1000).decode()
-while "flag" not in r.lower():
-    if "binario" in r.lower():
-        if "in" in r.lower():
-            for line in r.split("\n"):
-                if type(line) == dict:
-                    print(line)
-                    resp = ""
-                    for i in map(bin,bytearray(line["message"].encode())):
-                        resp += i.replace("0b", "")
-                    d = {"answer":f"{resp}"}
-                    s.send(d)
-        else:
-            for line in r.split("\n"):
-                if type(line) == dict:
-                    print(line)
-                    res = line["mesasage"]
-                    resp = ''.join([ chr(int(res[i:i+8],2)) for i in range(0,len(res),8)])
-                    d = {"answer":f"{resp}"}
-                    s.send(d)
-    elif "esadecimale" in r.lower():
-        if "in" in r.lower():
-            for line in r.split("\n"):
-                if type(line) == dict:
-                    print(line)
-                    resp = binascii.hexlify(line["message"].encode()).decode()
-                    d = {"answer":f"{resp}"}
-                    s.send(d)
-        else:
-            for line in r.split("\n"):
-                if type(line) == dict:
-                    print(line)
-                    resp = bytes.fromhex(line["mesasage"].encode()).decode()
-                    d = {"answer":f"{resp}"}
-                    s.send(d)
-    elif "base64" in r.lower():
-        if "in" in r.lower():
-            for line in r.split("\n"):
-                if type(line) == dict:
-                    print(line)
-                    resp = base64.b64encode(line["mesasage"].encode())
-                    d = {"answer":f"{resp}"}
-                    s.send(d)
-        else:
-            for line in r.split("\n"):
-                if type(line) == dict:
-                    print(line)
-                    resp = base64.b64decode(line["mesasage"].encode())
-                    d = {"answer":f"{resp}"}
-                    s.send(d)
-    r = s.recv(1000).decode()
+#!/usr/bin/env python3
 
-print(r)
+from pwn import *
+from base64 import b64decode, b64encode
+import re
+
+r = remote("based.challs.olicyber.it", 10600)
+r.recvuntil(b'\n\n')
+
+def bin_to_str(x):
+    ''' Copiata lol '''
+    my_int = int(x, base=2)
+    my_str = my_int.to_bytes((my_int.bit_length() + 7)//8, 'big')
+    return my_str
+
+while True:
+	t = r.recv(1000).decode()
+	print(t)
+	if 'da base64' in t:
+		t = t.split('\n')
+		j = eval(t[1])
+		r.sendline(b'{"answer": "' +  b64decode(j["message"].encode()) + b'"}')
+	elif 'da esadecimale' in t:
+		t = t.split('\n')
+		j = eval(t[1])
+		r.sendline(b'{"answer": "' + bytes.fromhex(j["message"]) + b'"}')
+	elif 'da binario' in t:
+		t = t.split('\n')
+		j = eval(t[1])
+		r.sendline(b'{"answer": "' + bin_to_str("0b"+j["message"]) + b'"}')
+	elif 'a base64' in t:
+		t = t.split('\n')
+		j = eval(t[1])
+		r.sendline(b'{"answer": "' + b64encode(j["message"].encode()) + b'"}')
+	elif 'a esadecimale' in t:
+		t = t.split('\n')
+		j = eval(t[1])
+		r.sendline(b'{"answer": "' + j["message"].encode().hex().encode() + b'"}')
+	elif 'a binario' in t:
+		t = t.split('\n')
+		j = eval(t[1])
+		binstr = ''.join(format(ord(i), '08b') for i in j["message"])
+		if binstr[0] != '1':
+			for i in range(len(binstr)):
+				if binstr[i] == '1':
+					binstr = binstr[i:]
+					break
+		r.sendline(b'{"answer": "' +  binstr.encode() + b'"}')
+	else:
+		print("skill issue", t)
+	flag = r.recvuntil(b'\n\n')
+	if b'flag' in flag.lower():
+		print(flag)
+		break
+	
