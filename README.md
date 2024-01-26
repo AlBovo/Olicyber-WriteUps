@@ -77,12 +77,4 @@ Questa repository contiene le flag e le spiegazioni di come ho risolto alcuni pr
 
 </details>
 <br> 
-  <br> 
-    <br> 
-      Made by
-      <a href="https://github.com/Pit17">Pit17</a>
-      <img src="https://avatars.githubusercontent.com/u/145590252?v=4" 
-        height="20" alt="Pit17"  />
-    </br>
-  </br>
-</br>
+Made by <a href="https://github.com/Pit17">Pit17<img src="https://avatars.githubusercontent.com/u/145590252?v=4" height="20" alt="Pit17"/></a>
