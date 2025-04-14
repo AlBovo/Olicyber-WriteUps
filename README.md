@@ -1,4 +1,4 @@
-<img src="https://olicyber.it/assets/loghi/logo-olicyber.svg" alt="olicyber-logo"></img>
+![olicyber logo](https://olicyber.it/assets/loghi/logo-olicyber.svg)
 # Olicyber WriteUps ✒️
 This repository contains all the source code for the various writeups I have written over time of all the [CTFs](https://en.wikipedia.org/wiki/Capture_the_flag_(cybersecurity)) I have participated in.
 
