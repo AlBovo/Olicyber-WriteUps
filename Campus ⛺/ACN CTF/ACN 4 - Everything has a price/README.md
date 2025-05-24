@@ -1,1 +1,0 @@
-Per ottenere la flag di questa chall basta di nuovo scorrere tutto il frame n.13 fino a che non vediamo scritto in chiaro il costo della transazione ovvero <code>10000$</code> quindi la flag finale sarà: <code>***acn{10000}***</code>

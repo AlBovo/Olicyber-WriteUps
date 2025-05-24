@@ -1,1 +1,0 @@
-Filtrando nuovamente il file usato fino ad'ora possiamo filtrare la comunicazione con un'altra espressione logica (tcp contains "Pwn all the things!!!") per ottenere una parte della flag ovvero: L3aRn1N9_4b0uT_F1lter5_F1nd_Th0s3_Str1n65_m8 che formatteremo per ottenere la flag intera ovvero: <code>**flag{L3aRn1N9_4b0uT_F1lter5_F1nd_Th0s3_Str1n65_m8}**</code>

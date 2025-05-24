@@ -1,1 +1,0 @@
-Per trovare la flag bisogna andare sul linkedin di <code>Infinite Energy Incorporated Srl</code> bisogna poi andare su "Eventi" e scegliere uno dei meeting, la flag è la via in cui si terrà l'evento, ovvero: <code>***flag{ViaOliCyber2021}***</code>

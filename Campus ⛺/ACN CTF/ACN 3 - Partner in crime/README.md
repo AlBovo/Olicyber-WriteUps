@@ -1,1 +1,0 @@
-Guardando il frame n.13 del file ottenuto dallo zip criptato possiamo vedere che l'email è stata mandata Jane Kerry a un anonimo con email <code>tbisset@tempmail.com</code>, possiamo quindi vedere che il cognome Bisset è presente nei pdf in allegato, ci basta quindi solo trovare il nome e abbiamo ottenuto la flag ovvero: <code>***acn{Teo Bisset}***</code>

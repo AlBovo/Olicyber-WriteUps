@@ -1,1 +1,0 @@
-Filtrando di nuovo il file precedentemente scaricato utilizzando una nuova espressione logica (frame.comment) otteniamo la flag ovvero: <code>**flag{L3aRn1N9_4b0uT_F1lter5_C0mm3Nt5_4R3_H4rd_t0_f1nD}**</code>

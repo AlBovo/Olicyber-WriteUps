@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /index.js
-Disallow: /package.json
-Disallow: /.git

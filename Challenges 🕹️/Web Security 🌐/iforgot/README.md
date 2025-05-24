@@ -1,1 +1,0 @@
-Ho usato `git-dumper` per scaricare la repository, poi ho usato `git log` per vedere i commit e `git diff <primo commit> <secondo commit>` per vedere i file.
