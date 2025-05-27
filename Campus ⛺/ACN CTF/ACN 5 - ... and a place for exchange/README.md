@@ -1,0 +1,1 @@
+Per risolvere pure questa chall bisogna guardare questa volta il frame n.10 possiamo vedere nel link di google maps il posto che stiamo cercando ovvero <code>Piazza Del Popolo, Roma, Italia</code> la flag che stiamo cercando sarà quindi semplicemente: <code>acn{Piazza Del Popolo}</code>

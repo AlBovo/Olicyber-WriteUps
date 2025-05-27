@@ -1,0 +1,1 @@
+Utilizzando wireshark per analizzare l'unico stream di dati tcp si ottiene, seguendo la comunicazione, la flag ovvero: <code>**flag{Y0u_kn0w_Wh4t_a_Pc4p_1s}**</code>
